@@ -157,7 +157,7 @@ class ArtisanRequest extends FormRequest
 
         $response = $client->request(
             'POST',
-            $this->resourceManagerEndpoint . env('GOOGLE_CLOUD_PROJECT') . ':testIamPermissions',
+            $this->resourceManagerEndpoint . config('artisan.google_cloud_project') . ':testIamPermissions',
             [
                 'headers' => [
                     'Accept'        => 'application/json',
